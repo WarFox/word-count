@@ -2,14 +2,17 @@
 <html>
     <head>
         <title>Copy &amp; Paste, Word &amp; Character counter</title>
+	<meta charset="utf-8" />
 	<style type="text/css">@import url(css/style.css);</style>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/counter.js"></script>
     </head>
     <body>
+	<h2>Paste or type your text below to the get the word and character count</h2>
         <div id="border">
             <textarea id='text'></textarea>
         </div>
+	<br/>
         <button id="count">Count</button>
         <div id="result">
             Words: <span id="wordCount">0</span><br/>
@@ -17,9 +20,13 @@
             Characters (excluding trails): <span id="charCount">0</span><br/>
             Characters (excluding all spaces): <span id="charCountNoSpace">0</span>
         </div>
-
-        <a href="http://www.w3.org/html/logo/">
-<img src="http://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
-</a>
+	<footer>
+		<a href="https://github.com/WarFox/word-count">
+			<img src="images/github.png" alt="Word count @ github" title="Word Count @ github"/>
+		</a>
+        	<a href="http://www.w3.org/html/logo/">
+			<img src="images/HTML5_Badge_32.png" width="32" height="32" alt="HTML5 Powered" title="HTML5 Powered"/>
+		</a>
+	</footer>
     </body>
 </html>

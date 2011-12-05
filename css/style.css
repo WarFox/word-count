@@ -1,13 +1,17 @@
+body {
+    font-family: 'Cagliostro', Courier New;
+}
 
 #border {
-    border: 1px solid red;
+    border: 0px solid red;
     height: 200px;
     width: 100%;
 }
 
 textarea {
+    font-family: 'Cagliostro',Courier New;
     height: 100%;
     width: 100%;
-    border: 0px;
+    
 }
 

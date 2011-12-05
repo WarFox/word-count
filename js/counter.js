@@ -21,8 +21,7 @@ counter = function() {
     $('#charCountNoSpace').html(charCountNoSpace);
 };
 
-$(document).ready(function() {
-    $('#count').click(counter);
+$(document).ready(function() {    
     $('#text').change(counter);
     $('#text').keydown(counter);
     $('#text').keypress(counter);

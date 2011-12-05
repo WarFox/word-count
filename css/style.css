@@ -1,17 +1,5 @@
-body {
-    font-family: 'Cagliostro', Courier New;
-}
+body {background-color:#d1e5e3; font-family: 'Cagliostro', Courier New;}
 
-#border {
-    border: 0px solid red;
-    height: 200px;
-    width: 100%;
-}
+#container { border: 0px solid red; height: 400px; width: 90%;}
 
-textarea {
-    font-family: 'Cagliostro',Courier New;
-    height: 100%;
-    width: 100%;
-    
-}
-
+textarea {background-color:#d1e5e3;font-family: 'Cagliostro',Courier New; height:100%; width: 100%;border:1px solid #255E6E;}

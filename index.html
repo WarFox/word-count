@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Copy &amp; Paste, Word &amp; Character counter</title>
-	<meta charset="utf-8" />
-        <link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
-	<style type="text/css">@import url(css/style.css);</style>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/counter.js"></script>
+        <title>Copy &amp; Paste, Word &amp; Character counter using Javascript, JQuery</title>
+        <meta charset="utf-8" />
+
+        <style type="text/css">@import url(css/style.css);</style>
+	
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.center.js"></script>
+        <script type="text/javascript" src="js/counter.js"></script>
     </head>
     <body>
-	<h2>Paste or type your text below to the get the word and character count</h2>
-        <div id="border">
+        <h1>Word Counter</h1>        
+        <div class="sleek">            
+            <h1>Paste or type your text to the textbox below to get the word and character count</h1>
+            <div class="sleek-body">
+                <ul>
+                    <li>
+                        <div class="result"><h2><span id="wordCount">0</span></h2></div>
+                        <div class="desc"><h2>Words</h2></div>
+                    </li>
+                    <li>
+                        <div class="result"><h2><span id="totalChars">0</span></h2></div>
+                        <div class="desc"><h2>Characters<br/>(including trails)</h2></div>
+                    </li>
+                    <li>
+                        <div class="result"><h2><span id="charCount">0</span></h2></div>
+                        <div class="desc"><h2>Characters<br/>(excluding trails)</h2></div>
+                    </li>
+                    <li>
+                        <div class="result"><h2><span id="charCountNoSpace">0</span></h2></div>
+                        <div class="desc"><h2>Characters<br/>(excluding all spaces)</h2></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="container">
             <textarea id='text'></textarea>
         </div>
-	<br/>        
-        <div id="result">
-            Words: <span id="wordCount">0</span><br/>
-            Total Characters(including trails): <span id="totalChars">0</span><br/>
-            Characters (excluding trails): <span id="charCount">0</span><br/>
-            Characters (excluding all spaces): <span id="charCountNoSpace">0</span>
-        </div>
-	<footer>
-		<a href="https://github.com/WarFox/word-count">
-			<img src="images/github.png" alt="Word count @ github" title="Word Count @ github"/>
-		</a>
-        	<a href="http://www.w3.org/html/logo/">
-			<img src="images/HTML5_Badge_32.png" width="32" height="32" alt="HTML5 Powered" title="HTML5 Powered"/>
-		</a>
+        <br/>
+	<footer>    
+            <ul>
+                <li>
+                    <a href="http://www.w3.org/html/logo/">
+                        <img src="images/HTML5_Badge_32.png" width="32" height="32" alt="HTML5 Powered" title="HTML5 Powered"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/WarFox/word-count/">
+                        <img src="images/github.png" alt="Word count @ github" title="Word Count @ github"/>
+                    </a>
+                </li>
+            </ul>
 	</footer>
     </body>
 </html>
+

@@ -1,5 +1,43 @@
-body {background-color:#d1e5e3; font-family: 'Cagliostro', Courier New;}
+/*
+    Document   : style
+    Created on : Dec 20, 2011, 5:36:23 PM
+    Author     : Deepu Mohan Puthrote
+*/
 
-#container { border: 0px solid red; height: 400px; width: 90%;}
+/*
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+/*font import*/
+@import url(http://fonts.googleapis.com/css?family=Cagliostro);
+
+root {margin: 0; padding: 0;display: block;}
+
+body {background-color:#d1e5e3; font-family: 'Cagliostro', Courier New; color:#393939; padding: 0 5px 0 5px;}
 
 textarea {background-color:#d1e5e3;font-family: 'Cagliostro',Courier New; height:100%; width: 100%;border:1px solid #255E6E;}
+
+h1 {padding: 0; margin: 0;}
+ul {display:inline; padding: 0;}
+li {list-style-type: none; display: inline;}
+
+#container {border: 0; height: 350px;}
+
+.sleek{margin:0 0 10px 0;}
+.sleek h1{color:#fff;font-size:16px;font-weight:bold;background-color:#255e6e;background:-moz-linear-gradient(center top,'#629998','#405A6A');filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#629998',endColorstr='#405a6a');background:-webkit-gradient(linear,left top,left bottom,from(#629998),to(#405a6a));background:-moz-linear-gradient(top,#629998,#405a6a);background:-o-linear-gradient(top,#629998,#405a6a);border:1px solid #677c89;border-bottom-color:#6b808d;border-radius:5px 5px 5px 5px;-moz-border-radius:5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;text-shadow:0 -1px 0 rgba(0,0,0,0.7);margin:0 0 10px 0;padding:8px 18px;position:relative;}
+.sleek h1 a{color:#fff;text-decoration:none;}
+.sleek h1 span{color:#e9f1f4;font-size:70%;font-weight:normal;text-shadow:none;}
+
+.sleek .sleek-body{overflow:hidden; padding: 0 0 0 150px;}
+
+.sleek ul{list-style-type:none;position:relative;}
+.sleek ul li{color:#666;font-size:13px;font-weight:normal;background-color:#d1e5f3;background:-moz-linear-gradient(center top,'#d1e5f3','#255e6e');filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#d1e5f3',endColorstr='#255e6e');background:-webkit-gradient(linear,left top,left bottom,from(#d1e5f3),to(#255e6e));background:-moz-linear-gradient(top,#d1e5f3,#255e6e);background:-o-linear-gradient(top,#d1e5f3,#255e6e);border:1px solid #255e6e;border-radius:5px 5px 5px 5px;-moz-border-radius:5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;display:block;width:215px;height:100px;float:left;position:relative;margin:0 10px 0 0;-moz-box-shadow:0 1px 0 #fff;-webkit-box-shadow:0 1px 0 #fff;box-shadow:0 1px 0 #fff;}
+.sleek ul li a{color:#666;text-decoration:none;}
+
+.sleek .result{padding:10px 0 0 20px;display:block;position:relative;height:35px;border-bottom:1px solid #255e6e;background-repeat:no-repeat;background-position:center center;}
+.sleek .result h2{margin:0;padding:0;font-size:32px;color:#393939;}
+
+.sleek .desc{padding:10px 0 15px 15px;display:block;height:45px;overflow:hidden;border-top:1px solid #fffae5;background-repeat:no-repeat;position:relative;z-index:2;}
+.sleek .desc h2{margin:0;padding:0;font-size:14px;color:#ffffee;}
+.sleek .desc p{margin:0;padding:0;line-height:1.2em;}
+

@@ -1,4 +1,4 @@
-counter = function() {
+let counter = function() {
     var value = $('#text').val();
 
     if (value.length == 0) {
@@ -21,7 +21,7 @@ counter = function() {
     $('#charCountNoSpace').html(charCountNoSpace);
 };
 
-$(document).ready(function() {    
+$(document).ready(function() {
     $('#text').change(counter);
     $('#text').keydown(counter);
     $('#text').keypress(counter);

@@ -14,7 +14,7 @@ var gutil = require('gulp-util');
 gulp.task('compile-jsx', function () {
     // set up the browserify instance on a task basis
     var b = browserify({
-      entries: ['./src/jquery.js', './src/main.js'],
+      entries: ['./src/main.js'],
       debug: true,
       // defining transforms here will avoid crashing your stream
       transform: [babelify]

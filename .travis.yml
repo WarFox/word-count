@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "0.12"
+before_script:
+  - npm install -g gulp
+env:
+  global:
+  - secure: AYvY68wW/6Q+Rr4+bHiSbfQNG/mjDdnZ6fvwzN9kxowEJ+7HGEPICE340Jncp6MhpvHjW6S/xWvfK4gf0VUsnDJFZhqHu2d9hlMK55apT1wUMWR0KsTFpIsyGaDLDsZh51RYG1gvVFwAEYFbA/UUSKwSLt2G1bCM2xBkhson218=
+  - secure: gGYOBn3wYWFmh/Dp6zsZR8/PPdwPtt0bXjdwTG9y8KVFE5ffBOwauqdpHjQAhvlPc6vwXQqCSI7qCpJe7lxZCTcdcYA87DjpTsp7tPiZcSr6FWgmD1UIFOYiRSQvvPfJdEwpp5L+7ae9LIskJulN/XHVzLW5UXiudAKXmCnswdM=
+  - secure: "C1u0whHMIfCJN1BKlBhRMj1yzyHXOBL0+CmTtSBjzecGsEBFCcPj1/a3wfY6h406cnbToQK5BP/e91gY8u0a+jEEs/Z13jLQEViL/Xgm9WNcE+7CdAnxEMmBODrvS6UWNcPPBrZpkz4utxYfvDvTXjAckR34ely3RhtgGAtV3FY="
+script:
+    gulp && ls dist
+after_success:
+  - "curl --ftp-create-dirs -T '{dist/css/*.css}' -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/css/"
+  - "curl --ftp-create-dirs -T '{dist/index.html}' -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/"
+  - "curl --ftp-create-dirs -T '{dist/js/*.js}' -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/js/"
+  - "curl --ftp-create-dirs -T '{dist/images/*.png}' -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/images/"
+
+# whitelist
+branches:
+  only:
+    - master
+sudo: false

@@ -10,9 +10,10 @@ let counter = function() {
     }
 
     var regex = /\s+/gi;
-    var wordCount = value.trim().replace(regex, ' ').split(' ').length;
+    const valueTrim = value.trim();
+    var wordCount = valueTrim.replace(regex, ' ').split(' ').length;
     var totalChars = value.length;
-    var charCount = value.trim().length;
+    var charCount = valueTrim.length;
     var charCountNoSpace = value.replace(regex, '').length;
 
     $('#wordCount').html(wordCount);
@@ -22,10 +23,11 @@ let counter = function() {
 };
 
 $(document).ready(function() {
-    $('#text').change(counter);
-    $('#text').keydown(counter);
-    $('#text').keypress(counter);
-    $('#text').keyup(counter);
-    $('#text').blur(counter);
-    $('#text').focus(counter);
+    const text = $('#text');
+    text.change(counter);
+    text.keydown(counter);
+    text.keypress(counter);
+    text.keyup(counter);
+    text.blur(counter);
+    text.focus(counter);
 });

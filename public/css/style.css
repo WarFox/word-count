@@ -9,7 +9,7 @@
 */
 
 /*font import*/
-@import url(http://fonts.googleapis.com/css?family=Cagliostro);
+@import url(https://fonts.googleapis.com/css?family=Cagliostro);
 
 root {margin: 0; padding: 0;display: block;}
 
@@ -40,4 +40,3 @@ li {list-style-type: none; display: inline;}
 .sleek .desc{padding:10px 0 15px 15px;display:block;height:45px;overflow:hidden;border-top:1px solid #fffae5;background-repeat:no-repeat;position:relative;z-index:2;}
 .sleek .desc h2{margin:0;padding:0;font-size:14px;color:#ffffee;}
 .sleek .desc p{margin:0;padding:0;line-height:1.2em;}
-

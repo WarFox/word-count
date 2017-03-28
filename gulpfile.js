@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var del = require('del');
-var minifyCSS = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var plumber = require('gulp-plumber');
 var browserify = require('browserify');
@@ -42,7 +42,7 @@ gulp.task('build-js', ['lint'], function () {
 gulp.task('build-css', function () {
     return gulp.src('./public/css/*.css')
         .pipe(gulp.dest('./build/css'))
-        .pipe(minifyCSS())
+        .pipe(cleanCSS())
         .pipe(rename({extname: ".min.css"}))
         .pipe(gulp.dest('./build/css'));
 });

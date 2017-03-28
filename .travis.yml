@@ -11,10 +11,10 @@ env:
 script:
     gulp && ls dist
 after_success:
-  - "curl --ftp-create-dirs -T '{dist/css/*.css}' -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/css/"
-  - "curl --ftp-create-dirs -T '{dist/index.html}' -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/"
-  - "curl --ftp-create-dirs -T '{dist/js/*.js}' -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/js/"
-  - "curl --ftp-create-dirs -T '{dist/images/*.png}' -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/images/"
+  - curl --ftp-create-dirs -T "{$(echo dist/css/*.css | tr ' ' ',')}" -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/css/
+  - curl --ftp-create-dirs -T "{dist/index.html}" -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/
+  - curl --ftp-create-dirs -T "{$(echo dist/js/*.js | tr ' ' ',')}" -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/js/
+  - curl --ftp-create-dirs -T "{$(echo dist/images/*.png | tr ' ' ',')}" -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/images/
 
 # whitelist
 branches:

@@ -1,23 +1,22 @@
 language: node_js
 node_js:
-  - "0.12"
+- '0.12'
 before_script:
-  - npm install -g gulp
-env:
-  global:
-  - secure: AYvY68wW/6Q+Rr4+bHiSbfQNG/mjDdnZ6fvwzN9kxowEJ+7HGEPICE340Jncp6MhpvHjW6S/xWvfK4gf0VUsnDJFZhqHu2d9hlMK55apT1wUMWR0KsTFpIsyGaDLDsZh51RYG1gvVFwAEYFbA/UUSKwSLt2G1bCM2xBkhson218=
-  - secure: gGYOBn3wYWFmh/Dp6zsZR8/PPdwPtt0bXjdwTG9y8KVFE5ffBOwauqdpHjQAhvlPc6vwXQqCSI7qCpJe7lxZCTcdcYA87DjpTsp7tPiZcSr6FWgmD1UIFOYiRSQvvPfJdEwpp5L+7ae9LIskJulN/XHVzLW5UXiudAKXmCnswdM=
-  - secure: "C1u0whHMIfCJN1BKlBhRMj1yzyHXOBL0+CmTtSBjzecGsEBFCcPj1/a3wfY6h406cnbToQK5BP/e91gY8u0a+jEEs/Z13jLQEViL/Xgm9WNcE+7CdAnxEMmBODrvS6UWNcPPBrZpkz4utxYfvDvTXjAckR34ely3RhtgGAtV3FY="
-script:
-    gulp && ls dist
-after_success:
-  - curl --ftp-create-dirs -T "{$(echo dist/css/*.css | tr ' ' ',')}" -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/css/
-  - curl --ftp-create-dirs -T "{dist/index.html}" -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/
-  - curl --ftp-create-dirs -T "{$(echo dist/js/*.js | tr ' ' ',')}" -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/js/
-  - curl --ftp-create-dirs -T "{$(echo dist/images/*.png | tr ' ' ',')}" -u $FTP_USER:$FTP_PASSWORD ${DEEPUMOHANCOM}/projects/word-count/images/
-
-# whitelist
+- npm install -g gulp
 branches:
   only:
-    - master
-sudo: false
+  - master
+script: gulp && ls dist
+deploy:
+  provider: s3
+  access_key_id: $ACCESS_KEY_ID
+  secret_access_key:
+    secure: WfWoAWzOpISW88V0ym6qCtw8wG4w8ej/owS8ai7SbeGj1PeCD9CNRRGMzjH4oUq0dPBJWJEAPAWjTLDRelX/ekO1+KaHaR88qqwBuvM0Jp+UO5n9U5ArMCgHrOsA1Y67fMY+qwgibyV199rZNou9XXtg6PYKLcoe1ZEFZl3Tf3k=
+  bucket: s3://deepumohan.com
+  local-dir: dist/
+  upload-dir: "/projects/word-count/"
+  on:
+    repo: WarFox/word-count
+env:
+  global:
+    secure: cpu8tRYNXwWqpXUBM6oqs4rBSuk8bMEEVGnQf7XvTYfkNm3qoYxpwxlVg6n2YJzvHx/e3VF5jV3XOSDJin2lJy/0sEMU7+0MjxLfaJEy+nFwTVafe90SutYjx6Kg9/fo51+/O8TUdc2I4n31pz8peuQyFkktHvWMUAMDwDr/H4Y=

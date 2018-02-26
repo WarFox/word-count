@@ -1,12 +1,10 @@
 language: node_js
 node_js:
-- '0.12'
-before_script:
-- npm install -g gulp
+  - '6.11.0'
 branches:
   only:
   - master
-script: gulp && ls dist
+script: yarn build
 deploy:
   provider: s3
   skip_cleanup: true
@@ -15,8 +13,8 @@ deploy:
     secure: WfWoAWzOpISW88V0ym6qCtw8wG4w8ej/owS8ai7SbeGj1PeCD9CNRRGMzjH4oUq0dPBJWJEAPAWjTLDRelX/ekO1+KaHaR88qqwBuvM0Jp+UO5n9U5ArMCgHrOsA1Y67fMY+qwgibyV199rZNou9XXtg6PYKLcoe1ZEFZl3Tf3k=
   bucket: deepumohan.com
   region: eu-west-1
-  local-dir: dist/
-  upload-dir: "/projects/word-count/"
+  local-dir: build/
+  upload-dir: "/projects/word-count-plus/"
   on:
     repo: WarFox/word-count
 env:

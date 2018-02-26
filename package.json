@@ -1,24 +1,22 @@
 {
-    "private": true,
-    "author": "Deepu Mohan Puthrote",
-    "engines": {
-        "node": ">= 0.12",
-        "npm": ">= 2.1"
-    },
-    "scripts": {
-        "build": "gulp"
-    },
-    "devDependencies": {
-        "babelify": "^6.2.0",
-        "browserify": "^11.0.0",
-        "del": "^1.2.0",
-        "gulp": "^3.9.0",
-        "gulp-clean-css": "^2.3.2",
-        "gulp-plumber": "^1.0.1",
-        "gulp-rename": "^1.2.2",
-        "gulp-uglify": "1.2.0",
-        "gulp-util": "^3.0.6",
-        "vinyl-buffer": "^1.0.0",
-        "vinyl-source-stream": "^1.1.0"
-    }
+  "name": "word-count-plus",
+  "version": "2.0.0",
+  "author": "Deepu Mohan Puthrote",
+  "homepage": "https://deepumohan.com/projects/word-count-plus",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.0",
+    "recharts": "^1.0.0-beta.10",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }

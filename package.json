@@ -1,16 +1,16 @@
 {
   "name": "word-count-plus",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Deepu Mohan Puthrote",
   "homepage": "https://deepumohan.com/projects/word-count-plus",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
-    "react-scripts": "1.1.0",
+    "react-scripts": "1.1.4",
     "recharts": "^1.0.0-beta.10",
-    "redux": "^3.7.2",
+    "redux": "^4.0.0",
     "redux-logger": "^3.0.6"
   },
   "scripts": {

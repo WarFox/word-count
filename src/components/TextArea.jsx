@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { refrestCount } from "../actions";
+import { refreshCount } from "../actions";
 
 const TextArea = ({
   onChange,
@@ -36,22 +36,22 @@ const TextArea = ({
 const mapDispatchToProps = dispatch => {
   return {
     onChange: text => {
-      dispatch(refrestCount(text, "ON_CHANGE"));
+      dispatch(refreshCount(text, "ON_CHANGE"));
     },
     onKeyDown: text => {
-      dispatch(refrestCount(text, "ON_KEYDOWN"));
+      dispatch(refreshCount(text, "ON_KEYDOWN"));
     },
     onKeyPress: text => {
-      dispatch(refrestCount(text, "ON_KEYPRESS"));
+      dispatch(refreshCount(text, "ON_KEYPRESS"));
     },
     onKeyUp: text => {
-      dispatch(refrestCount(text, "ON_KEYUP"));
+      dispatch(refreshCount(text, "ON_KEYUP"));
     },
     onBlur: text => {
-      dispatch(refrestCount(text, "ON_BLUR"));
+      dispatch(refreshCount(text, "ON_BLUR"));
     },
     onFocus: text => {
-      dispatch(refrestCount(text, "ON_FOCUS"));
+      dispatch(refreshCount(text, "ON_FOCUS"));
     }
   };
 };

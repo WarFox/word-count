@@ -3,9 +3,9 @@ import {
   Footer,
   Header,
   TextArea,
-  TinyLineChart,
-  DisplayStatistic
+  TinyLineChart
 } from "./components";
+import { Statistics } from "./wrappers";
 import { connect } from "react-redux";
 
 class App extends React.Component {
@@ -16,34 +16,11 @@ class App extends React.Component {
       <div className="ui container">
         <Header />
 
-        <div className="ui mini statistics">
-          <DisplayStatistic value={counts.wordCount}>Words</DisplayStatistic>
-          <DisplayStatistic value={counts.totalChars}>
-            Chars <br />(including trails)
-          </DisplayStatistic>
-          <DisplayStatistic value={counts.charCount}>
-            Chars <br />(excluding trails)
-          </DisplayStatistic>
-          <DisplayStatistic value={counts.charCountNoSpace}>
-            Chars <br />(no spaces)
-          </DisplayStatistic>
-          <DisplayStatistic value={counts.alphabetsCount}>
-            Alpbahets
-          </DisplayStatistic>
-          <DisplayStatistic value={counts.numbersCount}>
-            Numbers
-          </DisplayStatistic>
-          <DisplayStatistic value={counts.nonAlphaNumeric}>
-            Non AlphaNumeric
-          </DisplayStatistic>
-          <DisplayStatistic value={280 - counts.charCount}>
-            Tweet - 280 max
-          </DisplayStatistic>
-        </div>
+        <Statistics counts={counts}/>
 
         <TinyLineChart
           width={1100}
-          height={100}
+          height={75}
           data={counts.chartData}
           dataKey="word"
         />

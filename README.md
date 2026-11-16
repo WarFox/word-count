@@ -1,6 +1,6 @@
 # Word Count
 
-A simple word and character counter in html and jQuery.
+A simple word and character counter in HTML and jQuery.
 
 Capabilities include:
 * Copy and Paste to textarea to show the count
